@@ -66,7 +66,7 @@ class KML_Handler(object):
                 {
                     "type":"Feature",
                     "geometry": {"coordinates": _ll_, "type": geotype},
-                    "properties": {"marker-symbol": "camera", "name": name, "address": desc['address'], "image": desc['jpg_url']},
+                    "properties": {"marker-symbol": "camera", "name": name, "address": desc['address'], "image": "<img src="+desc['jpg_url']+">"},
                     }
             )
 
