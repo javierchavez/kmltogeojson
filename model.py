@@ -52,7 +52,7 @@ class KML_Handler(object):
             else:
                 # inner
                 desc = desctag.firstChild.nodeValue
-                desc = self.__handle_desc(desc)
+
 
             # name TAG surrounding
             namtag = pm.getElementsByTagName("name")[0]
@@ -63,25 +63,35 @@ class KML_Handler(object):
                 # inner
                 name = namtag.firstChild.nodeValue
 
+            _props_ = self.__make_properties_obj(desc, name)
+
             js["features"].append(
                 {
                     "type":"Feature",
                     "geometry": {"coordinates": _ll_, "type": geotype},
-                    "properties": {"marker-symbol": "marker-stroked", "name": name},
+                    "properties": _props_,
                     }
             )
 
         return json.dumps(js)
 
     @staticmethod
-    def __handle_desc(data):
+    def __make_properties_obj(data, name):
+        if not data:
+            return {"name": name}
+
         desc = re.sub(r'<!\[CDATA\[(.*)\]\]>', "", data)
 
-            # print desc
+        # ONLY parse if data is a table
         soup = BeautifulSoup(desc)
-        # rows = [a.get_text() for a in soup.find("table", border=1).find_all("tr")]
+        rows = soup.find("table", border=1)
 
-        rows = soup.find("table", border=1).find_all("tr")
+        # check for table
+        if rows is None:
+            return {"name": name}
+        else:
+            rows = rows.find_all("tr")
+
         new_desc = {}
         for row in rows:
             td = row.find_all("td")
