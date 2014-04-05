@@ -62,7 +62,7 @@ class KML_Handler(object):
                 {
                     "type":"Feature",
                     "geometry": {"coordinates": _ll_, "type": geotype},
-                    "properties": {"marker-symbol": "bar", "name": name },
+                    "properties": {"marker-symbol": "marker-stroked", "name": name },
                     }
             )
 
