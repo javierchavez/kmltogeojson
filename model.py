@@ -112,8 +112,13 @@ class KML_Handler(object):
             coor_tag= parent_tag.getElementsByTagName("coordinates")[0]
             tags = [ct for ct in parent_tag.getElementsByTagName("coordinates")]
             all = [s.firstChild.nodeValue.lstrip().split(' ') for s in tags]
-            # ll = sum(all, [])
-            return [ [float(ll_obj.split(",")[0]), float(ll_obj.split(",")[1])] for ll in all for ll_obj in ll ]
+
+            for ll in all:
+                for i, ll_obj in enumerate(ll):
+                    # print ll_obj
+                    ll[i] = [float(ll_obj.split(",")[0]), float(ll_obj.split(",")[1])]
+
+            return all
 
 
 class Data(object):
