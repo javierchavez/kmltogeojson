@@ -113,7 +113,7 @@ class KML_Handler(object):
             tags = [ct for ct in parent_tag.getElementsByTagName("coordinates")]
             all = [s.firstChild.nodeValue.lstrip().split(' ') for s in tags]
             ll = sum(all, [])
-            return [[ [float(ll_obj.split(",")[0]), float(ll_obj.split(",")[1])] for ll_obj in ll ]]
+            return [ [float(ll_obj.split(",")[0]), float(ll_obj.split(",")[1])] for ll_obj in ll ]
 
 
 class Data(object):
