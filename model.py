@@ -37,9 +37,9 @@ class KML_Handler(object):
                 geotype = "Polygon"
                 pnt = pm.getElementsByTagName("Polygon")[0]
                 _ll_ = self.__handle_multi_coordinates__(pnt)
-            elif pm.getElementsByTagName("LineString"):
+            elif pm.getElementsByTagName("MultiGeometry"):
                 geotype = "LineString"
-                pnt = pm.getElementsByTagName("LineString")[0]
+                pnt = pm.getElementsByTagName("MultiGeometry")[0]
                 _ll_ = self.__handle_multi_coordinates__(pnt, muli=True)
             else:
                 _ll_ = ""
@@ -112,8 +112,8 @@ class KML_Handler(object):
             coor_tag= parent_tag.getElementsByTagName("coordinates")[0]
             tags = [ct for ct in parent_tag.getElementsByTagName("coordinates")]
             all = [s.firstChild.nodeValue.lstrip().split(' ') for s in tags]
-            ll = sum(all, [])
-            return [ [float(ll_obj.split(",")[0]), float(ll_obj.split(",")[1])] for ll_obj in ll ]
+            # ll = sum(all, [])
+            return [ [float(ll_obj.split(",")[0]), float(ll_obj.split(",")[1])] for ll in all for ll_obj in ll ]
 
 
 class Data(object):
