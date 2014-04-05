@@ -1,3 +1,6 @@
+import re
+from bs4 import BeautifulSoup
+
 __author__ = 'Javier Chavez'
 
 import argparse
@@ -48,6 +51,7 @@ class KML_Handler(object):
             else:
                 # inner
                 desc = desctag.firstChild.nodeValue
+                desc = self.__handle_desc(desc)
 
             # name TAG surrounding
             namtag = pm.getElementsByTagName("name")[0]
@@ -62,11 +66,30 @@ class KML_Handler(object):
                 {
                     "type":"Feature",
                     "geometry": {"coordinates": _ll_, "type": geotype},
-                    "properties": {"marker-symbol": "camera", "name": name },
+                    "properties": {"marker-symbol": "camera", "name": name, "address": desc['address'], "image": desc['jpg_url']},
                     }
             )
 
         return json.dumps(js)
+
+    @staticmethod
+    def __handle_desc(data):
+        desc = re.sub(r'<!\[CDATA\[(.*)\]\]>', "", data)
+
+            # print desc
+        soup = BeautifulSoup(desc)
+        # rows = [a.get_text() for a in soup.find("table", border=1).find_all("tr")]
+
+        rows = soup.find("table", border=1).find_all("tr")
+        new_desc = {}
+        for row in rows:
+            td = row.find_all("td")
+            if len(td) == 2:
+                new_desc.update({td[0].get_text().lower().replace(" ","_"): td[1].get_text()})
+            else:
+                new_desc = {}
+
+        return new_desc
 
     @staticmethod
     def __handle_multi_coordinates__(parent_tag, muli=False):
