@@ -37,9 +37,9 @@ class KML_Handler(object):
                 geotype = "Polygon"
                 pnt = pm.getElementsByTagName("Polygon")[0]
                 _ll_ = self.__handle_multi_coordinates__(pnt)
-            elif pm.getElementsByTagName("MultiGeometry"):
-                geotype = "Polygon"
-                pnt = pm.getElementsByTagName("MultiGeometry")[0]
+            elif pm.getElementsByTagName("LineString"):
+                geotype = "LineString"
+                pnt = pm.getElementsByTagName("LineString")[0]
                 _ll_ = self.__handle_multi_coordinates__(pnt, muli=True)
             else:
                 _ll_ = ""
