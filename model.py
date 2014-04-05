@@ -38,6 +38,7 @@ class KML_Handler(object):
                 pnt = pm.getElementsByTagName("Polygon")[0]
                 _ll_ = self.__handle_multi_coordinates__(pnt)
             elif pm.getElementsByTagName("MultiGeometry"):
+                geotype = "Polygon"
                 pnt = pm.getElementsByTagName("MultiGeometry")[0]
                 _ll_ = self.__handle_multi_coordinates__(pnt, muli=True)
             else:
@@ -66,7 +67,7 @@ class KML_Handler(object):
                 {
                     "type":"Feature",
                     "geometry": {"coordinates": _ll_, "type": geotype},
-                    "properties": {"marker-symbol": "bus", "name": name, "stop_id": desc['stop_id'], "direction": desc['direction']},
+                    "properties": {"marker-symbol": "marker-stroked", "name": name},
                     }
             )
 
@@ -96,13 +97,13 @@ class KML_Handler(object):
         if not muli:
             coor_tag= parent_tag.getElementsByTagName("coordinates")[0]
             ll = coor_tag.firstChild.nodeValue.lstrip().split(' ')
-            return [ {"lng": ll_obj.split(",")[0], "lat": ll_obj.split(",")[1]} for ll_obj in ll ]
+            return [ [float(ll_obj.split(",")[0]), float(ll_obj.split(",")[1])] for ll_obj in ll ]
         else:
             coor_tag= parent_tag.getElementsByTagName("coordinates")[0]
             tags = [ct for ct in parent_tag.getElementsByTagName("coordinates")]
             all = [s.firstChild.nodeValue.lstrip().split(' ') for s in tags]
             ll = sum(all, [])
-            return [ {"lng": ll_obj.split(",")[0], "lat": ll_obj.split(",")[1]} for ll_obj in ll ]
+            return [ [float(ll_obj.split(",")[0]), float(ll_obj.split(",")[1])] for ll_obj in ll ]
 
 
 class Data(object):
