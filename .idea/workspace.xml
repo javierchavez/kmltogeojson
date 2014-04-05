@@ -88,8 +88,8 @@
       <file leaf-file-name="pa.geojson" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pa.geojson">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="815">
-              <caret line="0" column="435323" selection-start-line="0" selection-start-column="435323" selection-end-line="0" selection-end-column="435323" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,6 +110,7 @@
         <option value="$PROJECT_DIR$/Examples/busstops.geojson" />
         <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/Examples/parks.geojson" />
+        <option value="$PROJECT_DIR$/Examples/openspace.geojson" />
         <option value="$PROJECT_DIR$/pa.geojson" />
       </list>
     </option>
@@ -584,12 +585,12 @@
       <created>1396680273278</created>
       <updated>1396680273278</updated>
       <workItem from="1396680277058" duration="4030000" />
-      <workItem from="1396708885394" duration="3484000" />
+      <workItem from="1396708885394" duration="3601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7514000" />
+    <option name="totallyTimeSpent" value="7631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="963" y="190" width="1440" height="1406" extended-state="0" />
@@ -668,10 +669,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pa.geojson">
+    <entry file="file://$PROJECT_DIR$/Examples/openspace.geojson">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="815">
           <caret line="0" column="435323" selection-start-line="0" selection-start-column="435323" selection-end-line="0" selection-end-column="435323" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pa.geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
