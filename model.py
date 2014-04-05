@@ -77,9 +77,11 @@ class KMLHandler(object):
 
     @staticmethod
     def __make_properties_obj(data, name):
+        # If desc is empty stop
         if not data:
             return {"name": name}
 
+        # remove cdata
         desc = re.sub(r'<!\[CDATA\[(.*)\]\]>', "", data)
 
         # ONLY parse if data is a table
@@ -93,6 +95,7 @@ class KMLHandler(object):
             rows = rows.find_all("tr")
 
         new_desc = {}
+        # turn the tabe into K,V store
         for row in rows:
             td = row.find_all("td")
             if len(td) == 2:
@@ -104,13 +107,16 @@ class KMLHandler(object):
 
     @staticmethod
     def __handle_multi_coordinates__(parent_tag, muli=False):
+        coor_tag= parent_tag.getElementsByTagName("coordinates")[0]
         if not muli:
-            coor_tag= parent_tag.getElementsByTagName("coordinates")[0]
+            # strip leading space and split into arrs at every space
             ll = coor_tag.firstChild.nodeValue.lstrip().split(' ')
+            # iterate through arr and convert into lat lng arr
             return [[ [float(ll_obj.split(",")[0]), float(ll_obj.split(",")[1])] for ll_obj in ll ]]
         else:
-            coor_tag= parent_tag.getElementsByTagName("coordinates")[0]
+            # get all the coordinate tags
             tags = [ct for ct in parent_tag.getElementsByTagName("coordinates")]
+            # for all coordinate tag strip leading space and split into arrs at every space
             all = [s.firstChild.nodeValue.lstrip().split(' ') for s in tags]
 
             # that list comprehension tho
