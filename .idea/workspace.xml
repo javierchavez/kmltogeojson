@@ -67,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.93189967" vertical-offset="180" max-vertical-offset="2235">
-              <caret line="64" column="67" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
+              <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
               <folding>
                 <element signature="e#30#45#0" expanded="true" />
               </folding>
@@ -549,12 +549,12 @@
       <changelist id="897bce3c-af63-4f08-a65a-60504552276f" name="Default" comment="" />
       <created>1396680273278</created>
       <updated>1396680273278</updated>
-      <workItem from="1396680277058" duration="1112000" />
+      <workItem from="1396680277058" duration="1182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1112000" />
+    <option name="totallyTimeSpent" value="1182000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="963" y="190" width="1440" height="1406" extended-state="0" />
@@ -618,7 +618,7 @@
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.93189967" vertical-offset="180" max-vertical-offset="2235">
-          <caret line="64" column="67" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
+          <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
           <folding>
             <element signature="e#30#45#0" expanded="true" />
           </folding>
