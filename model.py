@@ -1,8 +1,8 @@
+__autgithor__ = 'Javier Chavez'
+
+
 import re
 from bs4 import BeautifulSoup
-
-__author__ = 'Javier Chavez'
-
 import argparse
 import json
 from zipfile import ZipFile
@@ -11,8 +11,7 @@ import urllib2
 import xml.dom.minidom
 
 
-
-class KML_Handler(object):
+class KMLHandler(object):
     def parse_kml_to_json(self, kml):
 
         doc= None
@@ -133,7 +132,7 @@ class Data(object):
             # clean up tmp file
             self.__clean_tmp__()
             # load it and parse it
-            self.__json__ =  json.loads(KML_Handler().parse_kml_to_json(self.kml_data))
+            self.__json__ =  json.loads(KMLHandler().parse_kml_to_json(self.kml_data))
         elif location[:4] == "http" and kmz:
             # download file
             self.__download_file__(location=location)
@@ -143,7 +142,7 @@ class Data(object):
             # clean up tmp file
             self.__clean_tmp__()
             # load it and parse it
-            self.__json__ =  json.loads(KML_Handler().parse_kml_to_json(self.kml_data))
+            self.__json__ =  json.loads(KMLHandler().parse_kml_to_json(self.kml_data))
         else:
             self.__init_file__(location)
             self.__json__ = json.load(self.json_file)
