@@ -143,6 +143,15 @@ class Data(object):
             self.__clean_tmp__()
             # load it and parse it
             self.__json__ =  json.loads(KMLHandler().parse_kml_to_json(self.kml_data))
+        elif location[:4] == "file":
+            # download file
+            self.__download_file__(location=location)
+            # open as file
+            self.kml_data = open('tmp', 'r')
+            # clean up tmp file
+            self.__clean_tmp__()
+            # load it and parse it
+            self.__json__ =  json.loads(KMLHandler().parse_kml_to_json(self.kml_data))
         else:
             self.__init_file__(location)
             self.__json__ = json.load(self.json_file)
