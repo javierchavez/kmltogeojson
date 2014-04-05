@@ -66,7 +66,7 @@
       <file leaf-file-name="model.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="2835">
+            <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="2835">
               <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -75,31 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pa.geojson" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pa.geojson">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-              <caret line="0" column="767049" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="767049" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="neighborhoods.geojson" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Examples/neighborhoods.geojson">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="815">
-              <caret line="0" column="767049" selection-start-line="0" selection-start-column="767049" selection-end-line="0" selection-end-column="767049" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="busroutes.geojson" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Examples/busroutes.geojson">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.072463766" vertical-offset="0" max-vertical-offset="828">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -125,6 +105,7 @@
         <option value="$PROJECT_DIR$/Examples/busroutes.geojson" />
         <option value="$PROJECT_DIR$/pa.geojson" />
         <option value="$PROJECT_DIR$/Examples/neighborhoods.geojson" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -598,12 +579,12 @@
       <created>1396680273278</created>
       <updated>1396680273278</updated>
       <workItem from="1396680277058" duration="4030000" />
-      <workItem from="1396708885394" duration="6537000" />
+      <workItem from="1396708885394" duration="6877000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10567000" />
+    <option name="totallyTimeSpent" value="10907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="810" y="124" width="1440" height="1406" extended-state="0" />
@@ -688,21 +669,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/busroutes.geojson">
+    <entry file="file://$PROJECT_DIR$/Examples/neighborhoods.geojson">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="815">
+          <caret line="0" column="766995" selection-start-line="0" selection-start-column="766995" selection-end-line="0" selection-end-column="766995" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="2835">
-          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,10 +685,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/neighborhoods.geojson">
+    <entry file="file://$PROJECT_DIR$/Examples/busroutes.geojson">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="815">
-          <caret line="0" column="767049" selection-start-line="0" selection-start-column="767049" selection-end-line="0" selection-end-column="767049" />
+        <state vertical-scroll-proportion="0.018404908" vertical-offset="0" max-vertical-offset="815">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="2835">
+          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.072463766" vertical-offset="0" max-vertical-offset="828">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
           <folding />
         </state>
       </provider>
