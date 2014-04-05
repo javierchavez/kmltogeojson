@@ -37,6 +37,7 @@ class KML_Handler(object):
                 geotype = "Polygon"
                 pnt = pm.getElementsByTagName("Polygon")[0]
                 _ll_ = self.__handle_multi_coordinates__(pnt)
+            # THIS IS STRICTLY FOR ABQ DATA
             elif pm.getElementsByTagName("MultiGeometry"):
                 geotype = "MultiLineString"
                 pnt = pm.getElementsByTagName("MultiGeometry")[0]
